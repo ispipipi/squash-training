@@ -1,4 +1,4 @@
-const CACHE_NAME = "squash-training-v1";
+const CACHE_NAME = "squash-training-v2";
 const APP_ASSETS = [
   "./",
   "./index.html",

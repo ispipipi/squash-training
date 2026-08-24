@@ -466,13 +466,13 @@
         </div>
         <h1>Squash Training</h1>
         <p class="subtitle">
-          Plan de 16 sesiones para recuperar aire, piernas y ritmo específico antes del torneo
+          Plan de 15 sesiones para recuperar aire, piernas y ritmo específico antes del torneo
           del lunes 7 de septiembre de 2026.
         </p>
         <div class="progress-panel" aria-live="polite">
           <div class="progress-copy">
             <p>Progreso total</p>
-            <span id="globalProgressLabel">0 de 46</span>
+            <span id="globalProgressLabel">0 de 43</span>
           </div>
           <div class="bar" aria-hidden="true"><span id="globalProgressBar"></span></div>
         </div>
@@ -503,20 +503,6 @@
 
     <script>
       const sessions = [
-        {
-          date: "2026-08-23",
-          day: "Domingo 23 de agosto",
-          title: "Cardio base",
-          duration: "40 min",
-          intensity: "RPE 5-6",
-          goal: "Volver a acostumbrar el cuerpo a trabajar continuamente sin terminar reventado.",
-          kind: "Cardio",
-          activities: [
-            ["Calentamiento", "7 min: caminata rápida, trote suave, 10 sentadillas, 10 estocadas alternadas, 20 jumping jacks y movilidad de tobillos y cadera."],
-            ["Trabajo continuo", "30 min de trote idealmente. Si no puedes salir, bicicleta estática, elíptica o subir y bajar un escalón. Mantén RPE 5-6."],
-            ["Final", "3 min caminando y movilidad suave para bajar pulsaciones."]
-          ]
-        },
         {
           date: "2026-08-24",
           day: "Lunes 24 de agosto",
@@ -730,7 +716,7 @@
       ];
 
       const storageKey = "squash-training-progress-v1";
-      const lastSessionKey = "squash-training-current-session-v1";
+      const lastSessionKey = "squash-training-current-session-v2";
       const root = document.querySelector("#sessionsRoot");
       const prevBtn = document.querySelector("#prevBtn");
       const nextBtn = document.querySelector("#nextBtn");
