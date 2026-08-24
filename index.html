@@ -391,42 +391,6 @@
         line-height: 1.4;
       }
 
-      .instructions {
-        display: grid;
-        gap: 10px;
-        margin-top: 16px;
-        padding: 14px;
-        border-radius: 8px;
-        border: 1px solid var(--line);
-        background: rgba(255, 253, 247, 0.76);
-      }
-
-      .instructions h2 {
-        font-size: 1.1rem;
-      }
-
-      .instructions ol {
-        margin: 0;
-        padding-left: 1.25rem;
-        color: var(--muted);
-        line-height: 1.48;
-      }
-
-      .install-hint {
-        display: none;
-        margin-top: 8px;
-        padding: 12px;
-        border-radius: 8px;
-        background: #fff4dc;
-        color: #6b4711;
-        font-size: 0.92rem;
-        line-height: 1.42;
-      }
-
-      .install-hint.is-visible {
-        display: block;
-      }
-
       @media (min-width: 700px) {
         .app-shell {
           padding-inline: 24px;
@@ -485,20 +449,6 @@
       </nav>
 
       <div id="sessionsRoot"></div>
-
-      <section class="instructions" aria-label="Publicación en GitHub Pages">
-        <h2>Publicación rápida</h2>
-        <ol>
-          <li>Crea un repositorio nuevo en GitHub, por ejemplo <strong>squash-training</strong>.</li>
-          <li>Sube todos los archivos de este paquete a la raíz del repositorio.</li>
-          <li>En GitHub entra a <strong>Settings</strong>, luego <strong>Pages</strong>.</li>
-          <li>Elige <strong>Deploy from a branch</strong>, rama <strong>main</strong>, carpeta <strong>/root</strong>.</li>
-          <li>Abre la URL publicada en Safari y usa <strong>Compartir</strong> para añadirla a la pantalla de inicio.</li>
-        </ol>
-        <p class="install-hint" id="installHint">
-          En iPhone se instala desde Safari: Compartir, Añadir a pantalla de inicio.
-        </p>
-      </section>
     </main>
 
     <script>
@@ -725,7 +675,6 @@
       const globalProgressBar = document.querySelector("#globalProgressBar");
       const globalProgressLabel = document.querySelector("#globalProgressLabel");
       const dateStatus = document.querySelector("#dateStatus");
-      const installHint = document.querySelector("#installHint");
       const totalActivities = sessions.reduce((sum, session) => sum + session.activities.length, 0);
       let currentIndex = getInitialIndex();
       let progress = readProgress();
@@ -952,9 +901,6 @@
         });
       }
 
-      const isIos = /iphone|ipad|ipod/i.test(window.navigator.userAgent);
-      const isStandalone = window.navigator.standalone || window.matchMedia("(display-mode: standalone)").matches;
-      installHint.classList.toggle("is-visible", isIos && !isStandalone);
     </script>
   </body>
 </html>
